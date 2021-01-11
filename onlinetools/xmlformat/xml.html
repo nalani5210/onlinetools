@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta lang="en" name="description" content="free online XML formatter .">
+  <meta lang="en" name="keywords" content="xml formatter, xml format, XML parser ,xml formatter online">
+  <meta property="og:title" content="XML Formatter, XML Format">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.jsonformatting.com">
+  <meta property="og:image" content="https://www.jsonformatting.com/assets/icon/json.png">
+  <meta property="og:description" content="free online XML formatter .">
+  <link rel="canonical" href="https://www.jsonformatting.com/xmlformat" />
+  <link rel="stylesheet" href="/xmlformat/xmlformat-assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/xmlformat/xmlformat-assets/css/style.css">
+  <title>XML to JSON Converter</title>
+  <style>
+    #ember180 {
+      margin-left: 360px;
+    }
+
+    .field {
+      height: 320px;
+    }
+
+    body {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+<script type="text/x-handlebars" data-template-name="xml">
+  <div class="row">
+    <div class="span5">
+      <form {{action submit on="submit"}}>
+        <fieldset>
+          {{outlet}}
+          <div class="control-group">
+            <button type="submit" class="btn">Parse Source</button>
+            <button type="button" {{bindAttr class=":btn :btn-clear clearDisabled:disabled"}}>Clear</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="span7">
+      <legend>
+        Parse Result
+      </legend>
+      <div class="parse-result">{{outlet rendered}}</div>
+    </div>
+  </div>
+  <div class="container">{{outlet json}}</div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="xml/paste">
+  <legend>Input XML</legend>
+  {{#view App.XmlView}}
+    <textarea name="xml" class="field span5" placeholder="Paste raw XML data"><?xml version="1.0" ?>
+      <Request>
+	<Phone>10236</Phone>
+	<mId>1</mId>
+	<ps>123456789</ps>
+	<puid>123456789</puid>
+</Request></textarea>
+  {{/view}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="rendered">
+  <pre>{{{content}}}</pre>
+</script>
+
+<script type="text/x-handlebars" data-template-name="result">
+  <legend>Code</legend>
+  <pre>{{code}}</pre>
+</script>
+
+<!--<script type="text/x-handlebars" data-template-name="json">-->
+<!--  <legend>JSON<div class="pull-right">{{partial "jsonoptions"}}</div></legend>-->
+<!--  <pre>{{json}}</pre>-->
+<!--</script>-->
+
+<script type="text/x-handlebars" data-template-name="_jsonoptions">
+  <label class="checkbox inline">{{view Ember.Checkbox checkedBinding="attributes"}} Include Attributes</label>
+  <label class="checkbox inline">{{view Ember.Checkbox checkedBinding="inline"}} Inline String</label>
+</script>
+
+<script type="text/x-handlebars" data-template-name="_addthis">
+  <!-- AddThis Button BEGIN -->
+  <div class="addthis_toolbox addthis_default_style">
+    <a class="addthis_button_preferred_1"></a>
+    <a class="addthis_button_preferred_2"></a>
+    <a class="addthis_button_preferred_3"></a>
+    <a class="addthis_button_preferred_4"></a>
+    <a class="addthis_button_compact"></a>
+    <a class="addthis_counter addthis_bubble_style"></a>
+  </div>
+  <!-- AddThis Button END -->
+</script>
+
+<script src="/xmlformat/xmlformat-assets/js/jquery-1.9.1.js"></script>
+<script src="/xmlformat/xmlformat-assets/js/handlebars-1.0.0-rc.3.js"></script>
+<script src="/xmlformat/xmlformat-assets/js/ember-1.0.0-rc.2.js"></script>
+<script src="/xmlformat/xmlformat-assets/js/xml2json.js"></script>
+<script src="/xmlformat/xmlformat-assets/js/xmlparser.js"></script>
+<script src="/xmlformat/xmlformat-assets/js/app.js"></script>
+
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script src="/xmlformat/xmlformat-assets/js/for.js"></script>
+
+</body>
+</html>

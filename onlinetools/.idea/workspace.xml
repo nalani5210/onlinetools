@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1aabf3c3-44f5-4046-90f2-20dc0e9a8777" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="ProjectId" id="1lKbpjcJRIA0XQBnojH1bNz1hTd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\love.github.io\love.github.io\AmJson" />
+      <recent name="D:\love.github.io\love.github.io\AmJson\assets\css\jsondiff" />
+      <recent name="D:\love.github.io\love.github.io\AmJson\assets\css" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1aabf3c3-44f5-4046-90f2-20dc0e9a8777" name="Default Changelist" comment="" />
+      <created>1607348936089</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607348936089</updated>
+      <workItem from="1607348942753" duration="4756000" />
+      <workItem from="1607778725235" duration="3986000" />
+      <workItem from="1607824452063" duration="407000" />
+      <workItem from="1607844158644" duration="3447000" />
+      <workItem from="1607953489335" duration="610000" />
+      <workItem from="1607954452427" duration="1321000" />
+      <workItem from="1608124107744" duration="445000" />
+      <workItem from="1608298529385" duration="6136000" />
+      <workItem from="1608390279517" duration="986000" />
+      <workItem from="1609773106026" duration="1322000" />
+      <workItem from="1610117962938" duration="1347000" />
+      <workItem from="1610120081130" duration="898000" />
+      <workItem from="1610198500817" duration="1747000" />
+      <workItem from="1610200284389" duration="1785000" />
+      <workItem from="1610202097372" duration="1793000" />
+      <workItem from="1610203919516" duration="1787000" />
+      <workItem from="1610205730480" duration="299000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

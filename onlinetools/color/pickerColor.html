@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>Color Selector - Color Picker - Html Color</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta lang="en" name="description" content="Color Selector,Finding that perfect color is easier than you think. Use our color picker to discover beautiful colors and harmonies with Hex color codes and RGB values.">
+    <meta lang="en" name="keywords" content="Color Selector,Color Picker,hex color picker,rgb color picker,html color codes,html color picker,hex code,hex colors,color code,color hex codes,hex codes.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <meta property="og:title" content="Color Selector - Color Picker - Html Color">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.jsonformatting.com">
+    <meta property="og:image" content="https://www.jsonformatting.com/assets/icon/json.png">
+    <meta property="og:description" content="Color Selector,Finding that perfect color is easier than you think. Use our color picker to discover beautiful colors and harmonies with Hex color codes and RGB values.">
+    <meta name="twitter:card" content="summary">
+    <script data-ad-client="ca-pub-3292250109309115" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <link href="/assets/icon/json.png" rel="icon">
+    <link href="/color/color-asets/css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+
+        td {
+            border: 0 !important;
+        }
+
+        #recommendation {
+            margin-top: 30px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+<div id="cs" class="container">
+    <div class="card">
+        <div class="card-header">
+            <h1><span class="text-primary">Color Selector</span></h1>
+            <span class="float-right text-muted"><a href="https://www.jsonformatting.com/" title="Visit https://www.jsonformatting.com/">home</a></span>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-3">
+                    <div id="chip" class="rounded border border-secondary shadow-sm"></div>
+                </div>
+                <div class="col-9">
+                    <input type="text" class="form-control mb-2" readonly value="rgb(255,255,255)" v-model="rgbcode" />
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">#</span>
+                        </div>
+                        <input type="text" class="form-control" value="FFFFFF" v-model="hexcode" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <table class="table mt-4 table-sm">
+                    <colgroup>
+                        <col width="" />
+                        <col width="50%" />
+                        <col width="" />
+                        <col width="" />
+                    </colgroup>
+                    <tr>
+                        <th>#</th>
+                        <th>Slider</th>
+                        <th>DEC</th>
+                        <th>HEX</th>
+                    </tr>
+                    <tr>
+                        <td class="pt-2">R</td>
+                        <td><input @mousemove="makecode" v-model="reddec" type="range" class="form-control-range mt-2" min="0" max="255" value="255"></td>
+                        <td><input @keyup="makecode" v-model="reddec" type="number" class="form-control" value="255"></td>
+                        <td><input @keyup="makecode" v-model="redhex" type="text" class="form-control" value="FF"></td>
+                    </tr>
+                    <tr>
+                        <td class="pt-2">G</td>
+                        <td><input @mousemove="makecode" v-model="greendec" type="range" class="form-control-range mt-2" min="0" max="255" value="255"></td>
+                        <td><input @keyup="makecode" v-model="greendec" type="number" class="form-control" value="255"></td>
+                        <td><input @keyup="makecode" v-model="greenhex" type="text" class="form-control" value="FF"></td>
+                    </tr>
+                    <tr>
+                        <td class="pt-2">B</td>
+                        <td><input @mousemove="makecode" v-model="bluedec" type="range" class="form-control-range mt-2" min="0" max="255" value="255"></td>
+                        <td><input @keyup="makecode" v-model="bluedec" type="number" class="form-control" value="255"></td>
+                        <td><input @keyup="makecode" v-model="bluehex" type="text" class="form-control" value="FF"></td>
+                    </tr>
+                </table>
+            </div>
+            <button @click="addchip" type="button" class="btn btn-sm border-primary">Add Color</button>
+            <div class="row">
+                <input type="text" id="copyform" style="position: fixed; top: -10000px;" />
+                <div class="card chip" v-for="(item,index) in chips" style="overflow: hidden;">
+                    <div class="card-body" v-bind:style="{backgroundColor:'#'+item}"></div>
+                    <div @click="copycode('#'+item,index)" @mouseover="showinfo(index)" @mouseout="hideinfo(index)" class="card-footer">#{{ item }}</div>
+                    <div @click="delchip(index)" class="badge badge-danger" v-bind:no="index">&times;</div>
+                    <div class="copyinfo">Copy to clipboard</div>
+                </div>
+            </div>
+            <div class="row" id="recommendation" >
+                <blockquote style="border-left: 4px solid #DDD;padding: 0 15px;color: #777;text-align: left;font-size: 16px;">Don't know what color to choose?
+                    <a href="/random-color/">See my recommendation</a></blockquote>
+            </div>
+        </div>
+        <div class="card-header">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- 横向广告位 -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-3292250109309115"
+                 data-ad-slot="2574845222"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="/color/color-asets/js/jquery-3.4.1.min.js"></script>
+<script src="/color/color-asets/js/vue.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="/color/color-asets/js/script.js"></script>
+</body>
+</html>
